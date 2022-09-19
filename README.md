@@ -1,5 +1,5 @@
 # poetry-installation-failure
-this if for creating a ticket for the poetry team
+this if for creating a ticket for the poetry team, see https://github.com/python-poetry/install.python-poetry.org/issues/48
 
 ## Reason
 As a devops engineer, we try to keep with the latest version but also keep things as stable as possible.
