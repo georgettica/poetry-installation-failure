@@ -29,6 +29,10 @@ docker run --rm -it poetry-installation-failure
 > curl -sSL https://install.python-poetry.org | python3.8 - --git https://github.com/python-poetry/poetry@d5c22c2641c415d5fea7cb321f3df7a0a873753b
 ```
 
+## Output
+
+the output is captured [here](./docs) to speed up checking the issue
+
 ## Contribute
 
 contribution of any form are welcome
