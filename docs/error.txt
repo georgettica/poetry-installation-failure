@@ -1,0 +1,65 @@
+cat /poetry-installer-error-nk3ilg13.log 
+Collecting git+https://github.com/python-poetry/poetry@d5c22c2641c415d5fea7cb321f3df7a0a873753b
+  Cloning https://github.com/python-poetry/poetry (to revision d5c22c2641c415d5fea7cb321f3df7a0a873753b) to /tmp/pip-req-build-opqt9w45
+  Running command git clone --filter=blob:none --quiet https://github.com/python-poetry/poetry /tmp/pip-req-build-opqt9w45
+  Running command git rev-parse -q --verify 'sha^d5c22c2641c415d5fea7cb321f3df7a0a873753b'
+  Running command git fetch -q https://github.com/python-poetry/poetry d5c22c2641c415d5fea7cb321f3df7a0a873753b
+  Running command git checkout -q d5c22c2641c415d5fea7cb321f3df7a0a873753b
+  Resolved https://github.com/python-poetry/poetry to commit d5c22c2641c415d5fea7cb321f3df7a0a873753b
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × Preparing metadata (pyproject.toml) did not run successfully.
+  │ exit code: 1
+  ╰─> [26 lines of output]
+      Traceback (most recent call last):
+        File "/root/.local/share/pypoetry/venv/lib/python3.8/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 363, in <module>
+          main()
+        File "/root/.local/share/pypoetry/venv/lib/python3.8/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 345, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+        File "/root/.local/share/pypoetry/venv/lib/python3.8/site-packages/pip/_vendor/pep517/in_process/_in_process.py", line 164, in prepare_metadata_for_build_wheel
+          return hook(metadata_directory, config_settings)
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/masonry/api.py", line 40, in prepare_metadata_for_build_wheel
+          poetry = Factory().create_poetry(Path(".").resolve(), with_groups=False)
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/factory.py", line 62, in create_poetry
+          package = self.configure_package(
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/factory.py", line 156, in configure_package
+          cls._add_package_group_dependencies(
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/factory.py", line 102, in _add_package_group_dependencies
+          cls.create_dependency(
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/factory.py", line 366, in create_dependency
+          dependency = Dependency(name, constraint, groups=groups)
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/packages/dependency.py", line 66, in __init__
+          self.constraint = constraint  # type: ignore[assignment]
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/packages/dependency.py", line 110, in constraint
+          self._constraint = parse_constraint(constraint)
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/semver/helpers.py", line 31, in parse_constraint
+          constraint_objects.append(parse_single_constraint(constraint))
+        File "/tmp/pip-build-env-vs30e_a7/overlay/lib/python3.8/site-packages/poetry/core/semver/helpers.py", line 147, in parse_single_constraint
+          raise ParseConstraintError(f"Could not parse version constraint: {constraint}")
+      poetry.core.semver.exceptions.ParseConstraintError: Could not parse version constraint: (>=20.4.3
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+
+Traceback:
+
+  File "<stdin>", line 919, in main
+  File "<stdin>", line 550, in run
+  File "<stdin>", line 572, in install
+  File "<stdin>", line 675, in install_poetry
+  File "<stdin>", line 367, in pip
+  File "<stdin>", line 364, in python
+  File "<stdin>", line 357, in run
