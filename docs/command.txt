@@ -1,0 +1,16 @@
+# curl -sSL https://install.python-poetry.org | python3.8 - --git https://github.com/python-poetry/poetry@d5c22c2641c415d5fea7cb321f3df7a0a873753b 
+# Welcome to Poetry!
+
+This will download and install the latest version of Poetry,
+a dependency and package manager for Python.
+
+It will add the `poetry` command to Poetry's bin directory, located at:
+
+/root/.local/bin
+
+You can uninstall at any time by executing this script with the --uninstall option,
+and these changes will be reverted.
+
+Installing Poetry (https://github.com/python-poetry/poetry@d5c22c2641c415d5fea7cb321f3df7a0a873753b): An error occurred. Removing partial environment.
+Poetry installation failed.
+See /poetry-installer-error-nk3ilg13.log for error logs.
